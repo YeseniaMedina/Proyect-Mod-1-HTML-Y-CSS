@@ -49,7 +49,7 @@
 }
 
 .nav-bar a:hover {
-  transform: translateY(-4px);
+  transform: translateY(-4px); /* para que suba el texto*/
 }
 
 .nav-bar a::after {
