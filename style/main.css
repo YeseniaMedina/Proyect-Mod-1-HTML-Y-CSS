@@ -12,7 +12,7 @@
 }
 
 .header-topbar {
-  width: 80%;
+  width: 85%;
   height: auto;
   display: flex;
   justify-content: space-between;
@@ -26,8 +26,7 @@
   width: 100%;
 }
 
-.nav-bar ul {
-  width: 100%;
+.nav-bar > ul {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,28 +59,28 @@
   transform: translateX(-50%) scaleX(0);
   transform-origin: center;
   width: 100%;
-  height: 2px;
+  height: 1.5px;
   background-color: white;
   transition: transform 0.5s ease;
 }
 
 .nav-bar a:hover::after {
-  transform: translateX(-50%) scaleX(1);
+  transform: translateX(-50%) scaleX(1); /*Trasladar la línea desde el centro a los lados*/
 }
 
 /* -----FIN DE ANIMACION---- */
 
+.search-tel {
+  width: 28%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 40px;
+}
+
 .search {
   display: flex;
   align-items: end;
-}
-
-.search-tel {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
   cursor: pointer;
 }
 
@@ -89,6 +88,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  transition-duration: 0.1s;
+}
+
+.tel:hover {
+  transform: scale(1.03);
+  color: rgb(46, 44, 44);
 }
 
 /* --------------------------MAIN----------------------- */
@@ -150,7 +156,7 @@ h1 > span {
   padding-top: 20px;
 }
 
-.hero-image {
+.hero-container div + div {
   width: 50%;
   position: absolute;
   left: 55%;
@@ -173,20 +179,20 @@ h1 > span {
   align-items: center;
 }
 
-.numbers-names {
+.numbers-container > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.numbers-names p:first-child {
+.numbers-container > div p:first-child {
   font-family: "Poppins", sans-serif;
   font-size: 50px;
   font-weight: 700;
 }
 
-.numbers-names p:last-child {
+.numbers-container > div p:last-child {
   font-family: "Roboto", sans-serif;
   font-size: 30px;
   font-weight: 400;
@@ -226,7 +232,7 @@ h1 > span {
 }
 
 .about-us-info h2 {
-  font-family: "Poppins", Sans Serif;
+  font-family: "Poppins", sans-serif;
   font-size: 45px;
   padding-bottom: 30px;
 }
@@ -234,7 +240,16 @@ h1 > span {
 .about-us-info p {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
+}
+
+.about-us-info > p {
   padding-bottom: 25px;
+}
+
+.about-us-info > ul li {
+  padding-bottom: 25px;
+  display: flex;
+  align-items: center;
 }
 
 .about-dos {
@@ -243,12 +258,13 @@ h1 > span {
   padding: 70px 0;
 }
 
-.circle {
+.about-us-container div + div > ul li::before {
+  content: "";
   display: inline-block;
-  width: 20px;
   height: 20px;
-  background-color: #fac000;
+  width: 20px;
   border-radius: 50%;
+  background-color: #fac000;
   margin-right: 10px;
 }
 
@@ -264,15 +280,17 @@ h1 > span {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   color: white;
   box-sizing: border-box;
-  transition-property: color;
-  transition-duration: 0.2s;
+  transition-property: background-color;
+  transition-duration: 0.5s;
 }
 
 /* ---Animaciones botones---- */
+
 .button-general:hover {
-  transform: scale(1.03);
-  transform: translateY(-2px);
+  transform: scale(1.02); /* para que aumente un poco*/
+  transform: translateY(-2px); /*para que el boton suba*/
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  background-color: black;
 }
 
 /* ------SECCION DE DUDAS------ */
@@ -307,7 +325,7 @@ h1 > span {
   padding-bottom: 30px;
 }
 
-.question-info h2 span {
+.question-info > h2 span {
   color: #fac000;
 }
 
@@ -318,13 +336,13 @@ h1 > span {
   gap: 25px;
 }
 
-.user-contact input {
-  padding: 15px;
+.user-contact > input:nth-child(3) {
+  grid-column: 1/3;
+  padding: 40px 10px;
 }
 
-.user-contact input:nth-child(3) {
-  grid-column: 1/3;
-  padding: 40px;
+.user-contact > input {
+  padding: 15px;
 }
 
 /* -----Se puede hacer los inputs de User-Contact en FLEX tambien-- */
@@ -353,15 +371,15 @@ h1 > span {
   box-sizing: border-box; /*--Para que input-message no crezca a lo largo*/
 /* } */
 
-/* ------ANIMACIÓN INPUTS FORM----- */
+/* ------DECORACION INPUTS FORM----- */
 
-.input-dec:focus {
+.user-contact > input:focus {
   border: 2px solid #fac000;
   outline: none;
 }
 /* -----fin decoración---- */
 
-.question-info a {
+.question-info > a {
   margin-top: 30px;
 }
 
@@ -383,7 +401,7 @@ h1 > span {
   position: relative; /*Contenedor relativo porque es el general*/
 }
 
-.subscribe-container h3 {
+.subscribe-container > h3 {
   font-size: 25px;
 }
 
@@ -422,13 +440,15 @@ h1 > span {
   font-size: 22px;
   font-weight: 300;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition-duration: 0.5s;
 }
 
 .subscribe-container > div button:hover {
-  transform: scale(1.02);
+  transform: scale(1.01);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.input-container ~ div {
+.subscribe-container div ~ div {
   border: none;
   position: absolute; /*Absoluto por que se sale del borde del contenedor para crear efecto*/
   right: 12%;
@@ -486,7 +506,7 @@ h1 > span {
   width: 16%;
 }
 
-.footer-container ~ div {
+.footer-container + div {
   width: 100%;
   display: flex;
   justify-content: center;
