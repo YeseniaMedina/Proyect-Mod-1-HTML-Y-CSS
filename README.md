@@ -4,11 +4,21 @@ This project is a landing page focuses on layout design and structural compositi
 
 ## Overview
 
+**HTML**:
+
 - Header with logo and navigation bar (fixed)
 - "About Us" section
 - Contact form
 - Subscribe email
 - Footer with additional info
+
+**CSS**:
+
+- Use of Flexbox and CSS Grid for layout
+- Implementation of CSS selectors
+- Semantic HTML structure
+
+## Important
 
 - This is a static project so it's strictly on HTML and CSS.
 - It's not a responsive design.
