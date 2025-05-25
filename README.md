@@ -18,7 +18,7 @@ This project is a landing page focuses on layout design and structural compositi
 - Implementation of CSS selectors
 - Semantic HTML structure
 
-## Important
+## Notes Important
 
 - This is a static project so it's strictly on HTML and CSS.
 - It's not a responsive design.
