@@ -1,4 +1,4 @@
-# Final Project Module 1 - HTML/CSS Landing Page
+# Final Project Module 1 - HTML/CSS - Landing Page
 
 This project is a landing page focuses on layout design and structural composition using HTML5 and CSS3. The goal was to apply best practices in semantic tags, CSS selectors, positioning, visual design, and clean file organization.
 
@@ -23,7 +23,7 @@ This project is a landing page focuses on layout design and structural compositi
 - This is a static project so it's strictly on HTML and CSS.
 - It's not a responsive design.
 
-## Tecnologías utilizadas
+## Tecnologies used
 
 - **HTML5** - Content structure
 - **CSS3** - Visual styling and layout
@@ -53,6 +53,6 @@ Proyecto-final-módulo1/
 
 ## Author
 
-- This project was developed as un first basic module.
+- This project was developed as a first basic module.
 - Name: Yesenia Medina
 - Course: Module 1 – Basic HTML and CSS
